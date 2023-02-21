@@ -5,7 +5,7 @@
  * _isalpha - is alpha
  * @c: The character to check
  *
- * Description: check if argument is a letter, lowercase or uppercase using ctype
+ * Description: check if argument is a letter, lower or upper using ctype
  *
  * Return: int
 */
