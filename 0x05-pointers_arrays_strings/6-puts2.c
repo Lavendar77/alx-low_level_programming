@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * put2 - print every other character
+ * puts2 - print every other character
  * @str: string to reverse
  *
  * Return: void
