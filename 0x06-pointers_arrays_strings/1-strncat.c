@@ -2,10 +2,10 @@
 #include <string.h>
 
 /**
- * _strncat - copy string up to n characters
+ * _strncat - concatenate string up to n characters
  * @dest: destination string
- * @src: string to copy into destination
- * @n: number of characters to copy
+ * @src: string to concatenate into destination
+ * @n: number of characters to concatenate
  *
  * Return: *
 */

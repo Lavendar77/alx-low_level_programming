@@ -2,9 +2,9 @@
 #include <string.h>
 
 /**
- * _strcat - copy string
- * @dest: destination variable
- * @src: string to copy
+ * _strcat - concatenate string
+ * @dest: string to concatenate to
+ * @src: string to concatenate from
  *
  * Return: char
 */
