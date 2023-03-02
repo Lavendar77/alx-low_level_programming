@@ -23,25 +23,33 @@ void reverse_array(int *a, int n)
 
 		if (answer < 10)
 		{
-			_putchar(answer + '0');
+			_putchar((answer % 10) + 48);
 		}
 		else if (answer >= 10 && answer < 100)
 		{
-			_putchar('0' + (answer / 10));
-			_putchar('0' + (answer % 10));
+			_putchar(((answer / 10) % 10) + 48);
+			_putchar((answer % 10) + 48);
 		}
 		else if (answer >= 100 && answer < 1000)
 		{
-			_putchar('0' + (answer / 100));
-			_putchar('0' + ((answer / 10) % 10));
-			_putchar('0' + (answer % 10));
+			_putchar(((answer / 100) % 10) + 48);
+			_putchar(((answer / 10) % 10) + 48);
+			_putchar((answer % 10) + 48);
 		}
 		else if (answer >= 1000 && answer < 10000)
 		{
-			_putchar('0' + (answer / 1000));
-			_putchar('0' + ((answer / 100) % 10));
-			_putchar('0' + ((answer / 10) % 10));
-			_putchar('0' + (answer % 10));
+			_putchar(((answer / 1000) % 10) + 48);
+			_putchar(((answer / 100) % 10) + 48);
+			_putchar(((answer / 10) % 10) + 48);
+			_putchar((answer % 10) + 48);
+		}
+		else if (answer >= 10000 && answer < 100000)
+		{
+			_putchar(((answer / 10000) % 10) + 48);
+			_putchar(((answer / 1000) % 10) + 48);
+			_putchar(((answer / 100) % 10) + 48);
+			_putchar(((answer / 10) % 10) + 48);
+			_putchar((answer % 10) + 48);
 		}
 	}
 
