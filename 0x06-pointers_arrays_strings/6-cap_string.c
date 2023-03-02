@@ -2,35 +2,41 @@
 
 /**
  * cap_string - capitalize first letter of word in string
- * @s: string to convert
+ * @str: string to convert
  *
  * Return: char
 */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int i;
-	int j;
-	int k;
-	int separators[] = {' ', '\t', '\n', ',', ';', '.', '?', '"', '(', ')', '{', '}'};
+	int index = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (str[index])
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (
+			str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0
+		)
 		{
-			s[i] = s[i] - k;
+			str[index] -= 32;
 		}
 
-		k = 0;
-
-		for (j = 0; j <= 12; j++)
-		{
-			if (s[i] == separators[j])
-			{
-				j = 12;
-				k = 32;
-			}
-		}
+		index++;
 	}
 
-	return (s);
+	return (str);
 }
