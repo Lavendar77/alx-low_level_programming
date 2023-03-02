@@ -6,24 +6,23 @@
  *
  * Return: char
  */
-char *leet(char *n)
+char *leet(char *s)
 {
 	int i;
-	int x;
-	int find[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int replacer[] = {'4', '3', '0', '7', '1'};
+	int j;
+	char a[] = "aAeEoOtTlL";
+	char b[] = "4433007711";
 
-	for (i = 0; n[i] != '\0'; i++)
+	for (i = 0; *(s + i); i++)
 	{
-		for (x = 0; x <= 9; x++)
+		for (j = 0; j <= 9; j++)
 		{
-			if (n[i] == find[x])
+			if (a[j] == s[i])
 			{
-				n[i] = replacer[x / 2];
-				x = 9;
+				s[i] = b[j];
 			}
 		}
 	}
 
-	return (n);
+	return (s);
 }
