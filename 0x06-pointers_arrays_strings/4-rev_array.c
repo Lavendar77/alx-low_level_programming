@@ -43,14 +43,6 @@ void reverse_array(int *a, int n)
 			_putchar(((answer / 10) % 10) + 48);
 			_putchar((answer % 10) + 48);
 		}
-		else if (answer >= 10000 && answer < 100000)
-		{
-			_putchar(((answer / 10000) % 10) + 48);
-			_putchar(((answer / 1000) % 10) + 48);
-			_putchar(((answer / 100) % 10) + 48);
-			_putchar(((answer / 10) % 10) + 48);
-			_putchar((answer % 10) + 48);
-		}
 	}
 
 	_putchar('\n');
