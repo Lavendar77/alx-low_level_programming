@@ -10,20 +10,23 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0;
+	int i = 0, x = 0, y = 0;
 	char *result;
 
-	if (s1 == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
-		s1 = "";
+		s1 = s2 = "";
 	}
 
-	if (s2 == NULL)
+	for (x = 0; x <= *s1; x++)
 	{
-		s2 = "";
 	}
 
-	result = malloc(sizeof(char));
+	for (y = 0; y <= *s2; y++)
+	{
+	}
+
+	result = malloc(sizeof(char) * (x + y + 1));
 
 	if (result == NULL)
 	{
