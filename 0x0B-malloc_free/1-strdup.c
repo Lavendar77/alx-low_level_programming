@@ -11,12 +11,14 @@
 */
 char *_strdup(char *str)
 {
-	char *newstr = strdup(str);
+	char *newstr;
 
-	if (str == NULL || newstr == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
+
+	newstr = strdup(str);
 
 	return (newstr);
 }
